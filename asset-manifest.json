@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cowin-slots/static/css/main.bc49f875.chunk.css",
+    "main.js": "/cowin-slots/static/js/main.35f5133c.chunk.js",
+    "main.js.map": "/cowin-slots/static/js/main.35f5133c.chunk.js.map",
+    "runtime-main.js": "/cowin-slots/static/js/runtime-main.b91fcc13.js",
+    "runtime-main.js.map": "/cowin-slots/static/js/runtime-main.b91fcc13.js.map",
+    "static/js/2.7f4f25f5.chunk.js": "/cowin-slots/static/js/2.7f4f25f5.chunk.js",
+    "static/js/2.7f4f25f5.chunk.js.map": "/cowin-slots/static/js/2.7f4f25f5.chunk.js.map",
+    "static/js/3.50305ece.chunk.js": "/cowin-slots/static/js/3.50305ece.chunk.js",
+    "static/js/3.50305ece.chunk.js.map": "/cowin-slots/static/js/3.50305ece.chunk.js.map",
+    "index.html": "/cowin-slots/index.html",
+    "static/css/main.bc49f875.chunk.css.map": "/cowin-slots/static/css/main.bc49f875.chunk.css.map",
+    "static/js/2.7f4f25f5.chunk.js.LICENSE.txt": "/cowin-slots/static/js/2.7f4f25f5.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cowin-slots/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b91fcc13.js",
+    "static/js/2.7f4f25f5.chunk.js",
+    "static/css/main.bc49f875.chunk.css",
+    "static/js/main.35f5133c.chunk.js"
+  ]
+}
