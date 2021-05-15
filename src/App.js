@@ -67,14 +67,21 @@ function App() {
   
       axios(config)
       .then(function (res) {
-        if (res.status == 200 && res.data.status == 'success') {
-          alert('Your Request has been submitted. We will notify you instantly for the slots');
-          return
-        }
-        else {
-          alert(`Your request didn't go through. We may be little overloaded. Please try again`);
-          return
-        }
+        if (res.status == 200 ) {
+          phoneRef.current.value = ''
+          ageRef.current.value = ''
+          pincodeRef.current.value = ''
+          if (res.data.status === 'success') {
+            alert('Your Request has been submitted. We will notify you instantly for the slots');
+            return
+          } else if (res.data.message.indexOf('E11000') > -1) {
+            alert('We already have your record. Stay safe! we will notify you')
+            return
+          }
+        } 
+         
+        alert(`Your request didn't go through. We may be little overloaded. Please try again`);
+        return
       }).catch((e) => {
         alert(`Your request failed! we may be overloaded. Please try again`);
       })
