@@ -1,5 +1,4 @@
 $base: #03a9f4;
-$base-light: #72d1fe;
 $text: #555;
 $invalid: #e91e63;
 $width: 400px;
@@ -102,10 +101,6 @@ button {
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
-  }
-  &:disabled {
-    background: $base-light;
-    cursor: not-allowed;
   }
 }
 
