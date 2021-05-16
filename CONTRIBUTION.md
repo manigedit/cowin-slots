@@ -11,7 +11,7 @@ First off, thank you for considering contributing to this project. It's people l
   <ul>
     <li>Make sure that there are no duplicate issues by first checking the <a href="https://github.com/manigedit/cowin-slots/issues">Issues</a> tab</li>
     <li>
-      The title should follow the following pattern: <code>[TYPE]: &ltshort-description&gt</code>, where <code>TYPE</code> is one of <code>feat</code> | <code>fix</code> | <code>docs</code> | <code>build</code> | <code>ci/cd</code>
+      The title should follow the following pattern: <code>[TYPE] &ltshort-description&gt</code>, where <code>TYPE</code> is one of <code>feat</code> | <code>fix</code> | <code>docs</code> | <code>build</code> | <code>ci/cd</code>
     </li>
     <li>
       Explain, in detail, what the issue is about and if it's a bug, add steps to reproduce it.
