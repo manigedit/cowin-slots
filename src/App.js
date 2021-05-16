@@ -4,7 +4,7 @@ import { BeatLoader } from "react-spinners";
 
 import "./App.scss";
 
-function App() {
+const App = () => {
   const [loading, setLoading] = React.useState(false);
 
   const phoneRef = React.useRef();
@@ -153,6 +153,6 @@ function App() {
       ></link>
     </>
   );
-}
+};
 
 export default App;
