@@ -1,15 +1,20 @@
-$base: #03A9F4;
+$base: #03a9f4;
 $text: #555;
-$invalid: #E91E63;
+$invalid: #e91e63;
 $width: 400px;
-$cubic: cubic-bezier(.64,.09,.08,1);
+$cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-html, body, form, span, h1 {
-    box-sizing: border-box;
+html,
+body,
+form,
+span,
+h1 {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -17,15 +22,15 @@ h1 {
   background: $base;
   padding: 20px;
   color: white;
-  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
   border-radius: 3px 3px 0 0;
 }
 
 form {
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   width: $width + 60px;
   margin: 100px auto 0;
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
   padding: 0 0 40px;
   border-radius: 3px;
   color: $text;
@@ -33,9 +38,9 @@ form {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font: inherit;width: $width;
-  transition: transform 0.3s ease-in-out,
-    font-size 0.3s ease-in-out,
+  font: inherit;
+  width: $width;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
 }
 
@@ -49,17 +54,17 @@ textarea {
   border: none;
   padding: 20px 0 10px;
   border-bottom: solid 1px $base;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $base 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, $base 4%);
   background-position: -$width 0;
   background-size: $width 100%;
   background-repeat: no-repeat;
   transition: background 0.3s $cubic;
   resize: none;
-  overflow: hidden; 
+  overflow: hidden;
   &:focus::-webkit-input-placeholder {
     color: $base;
-  }  
-  &:focus, 
+  }
+  &:focus,
   &:valid {
     box-shadow: none;
     outline: none;
@@ -70,11 +75,8 @@ textarea {
       visibility: visible !important;
       opacity: 1;
     }
-  }  
+  }
 }
-
-
-
 
 .flex {
   display: flex;
@@ -85,9 +87,8 @@ textarea {
 }
 
 button {
-  font-family: 'roboto', sans-serif;
-  transition: transform 0.2s $cubic,
-     box-shadow 0.2s $cubic;
+  font-family: "roboto", sans-serif;
+  transition: transform 0.2s $cubic, box-shadow 0.2s $cubic;
   border: none;
   background: $base;
   cursor: pointer;
@@ -96,10 +97,10 @@ button {
   width: $width;
   color: white;
   margin: 30px 0 0 25px;
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-  &:hover { 
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -130,7 +131,7 @@ a {
   transition: all 0.2s $cubic;
   font-family: Roboto, sans-serif;
   text-decoration: none;
-  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
   i {
     margin-right: 20px;
     transition: margin-right 0.2s $cubic;
@@ -146,56 +147,59 @@ a {
 
 @media (max-width: 480px) {
   button {
-      width: 200px;
+    width: 200px;
   }
   form {
     width: 260px;
   }
-  input, textarea {
+  input,
+  textarea {
     width: 200px;
     background-position: 200px 0;
     background-size: 200px 100%;
   }
   input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  width: 200px;
-}
+  textarea::-webkit-input-placeholder {
+    width: 200px;
+  }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
   button {
-      width: 250px;
+    width: 250px;
   }
   form {
     width: 310px;
   }
-  input, textarea {
+  input,
+  textarea {
     width: 250px;
     background-position: 250px 0;
     background-size: 250px 100%;
   }
   input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  width: 250px;
-}
+  textarea::-webkit-input-placeholder {
+    width: 250px;
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   button {
-      width: 350px;
+    width: 350px;
   }
   form {
     width: 410px;
   }
-  input, textarea {
+  input,
+  textarea {
     width: 350px;
     background-position: 350px 0;
     background-size: 350px 100%;
   }
   input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  width: 350px;
-}
+  textarea::-webkit-input-placeholder {
+    width: 350px;
+  }
 }
