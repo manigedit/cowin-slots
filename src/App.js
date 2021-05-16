@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-import "./App.scss";
 import React from "react";
 import axios from "axios";
 import { BeatLoader } from "react-spinners";
+
+import "./App.scss";
 
 function App() {
   const [loading, setLoading] = React.useState(false);
