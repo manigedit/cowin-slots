@@ -1,9 +1,12 @@
-import * as React from "react";
-import axios from "axios";
-
+import logo from "./logo.svg";
 import "./App.scss";
+import React from "react";
+import axios from "axios";
+import { BeatLoader } from "react-spinners";
 
-const App = () => {
+function App() {
+  const [loading, setLoading] = React.useState(false);
+
   const phoneRef = React.useRef();
   const ageRef = React.useRef();
   const pincodeRef = React.useRef();
@@ -36,6 +39,7 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log(
       "Submitting with ",
       phoneRef.current.value,
@@ -45,13 +49,16 @@ const App = () => {
 
     if (!isValid(10, phoneRef.current.value)) {
       alert("Phone number is Invalid");
+      setLoading(false);
       return;
     }
     if (!isValid(2, ageRef.current.value)) {
+      setLoading(false);
       alert("Please enter valid age");
       return;
     }
     if (!isValid(6, pincodeRef.current.value)) {
+      setLoading(false);
       alert("Please enter valid pincode. Currently we only support Bihar");
       return;
     }
@@ -75,9 +82,11 @@ const App = () => {
             alert(
               "Your Request has been submitted. We will notify you instantly for the slots"
             );
+            setLoading(false);
             return;
           } else if (res.data.message.indexOf("E11000") > -1) {
             alert("We already have your record. Stay safe! we will notify you");
+            setLoading(false);
             return;
           }
         }
@@ -85,9 +94,11 @@ const App = () => {
         alert(
           `Your request didn't go through. We may be little overloaded. Please try again`
         );
+        setLoading(false);
         return;
       })
       .catch((e) => {
+        setLoading(false);
         alert(`Your request failed! we may be overloaded. Please try again`);
       });
   };
@@ -97,12 +108,14 @@ const App = () => {
       <form>
         <h1>Get instant Alerts for Vaccination slots</h1>
         <input
+          disabled={loading}
           placeholder="Whatsapp Number"
           type="tel"
           maxLength="10"
           ref={phoneRef}
         ></input>
         <input
+          disabled={loading}
           placeholder="Age"
           type="tel"
           maxLength="2"
@@ -110,12 +123,19 @@ const App = () => {
           ref={ageRef}
         ></input>
         <input
+          disabled={loading}
           placeholder="Pincode"
           type="tel"
           maxLength="6"
           ref={pincodeRef}
         ></input>
-        <button onClick={handleSubmit}>Send</button>
+        <button disabled={loading} onClick={handleSubmit}>
+          {loading ? (
+            <BeatLoader size={6} marin={1} color={"#017DB7"} />
+          ) : (
+            "Submit"
+          )}
+        </button>
       </form>
 
       <a href="https://twitter.com/manigedit" target="_blank">
@@ -133,6 +153,6 @@ const App = () => {
       ></link>
     </>
   );
-};
+}
 
 export default App;
